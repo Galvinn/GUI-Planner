@@ -87,7 +87,6 @@ def generate_action(goal: str, model: str, image_b64: str, mime_type: str) -> st
         ]
         payload = {"model": "glm-4.6v-flash", "messages": messages}
         headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-
         resp = requests.post(url, headers=headers, json=payload, timeout=60)
         if resp.ok:
             data = resp.json()

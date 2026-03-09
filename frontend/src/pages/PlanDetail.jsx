@@ -95,7 +95,7 @@ export default function PlanDetail() {
           <div className="list-meta">Stored screenshot</div>
           <div style={{ height: '0.5rem' }} />
           {imageSrc ? (
-            <img src={imageSrc} alt="Stored screenshot" className="preview" />
+            <img src={imageSrc} alt="Stored screenshot" className="preview" style={{ maxHeight: '560px' }} />
           ) : (
             <p className="muted">No image data returned.</p>
           )}
