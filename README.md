@@ -2,6 +2,12 @@
 
 A client-server system that recommends the next UI action from a phone screenshot and user goal, using vision language models (VLMs).
 
+## Submission Requirements:
+- CMPUT398_Project_Report.pdf: Project Report, uses Chicago Style for citation
+- run.sh: bash file to start backend and frontend
+- Acknowledgement.pdf: acknowledgement of resources, and AI usage
+- Demo.mp4: Demo video of installation, and system functionality
+
 ## Project structure
 
 - **frontend/** – React + Vite web app
@@ -24,7 +30,7 @@ Wait until you see `==> Backend: ready`, then open `http://localhost:3000`.
 - Starts the Flask backend at `http://127.0.0.1:5001`
 - Installs frontend dependencies (if needed) and starts Vite at `http://localhost:3000`
 
-## Setup (manual)
+## Alternative: Setup (manual)
 
 ### Backend
 
@@ -60,7 +66,7 @@ npm run dev -- --port 3000 --strictPort
 
 1. Upload a screenshot (phone UI).
 2. Enter a goal (e.g. “open YouTube app”).
-3. (Optional) Select a model.
+3. (Optional) Select a model (only GLM-4.6V-Flash is supported Currently)
 4. Click **Plan** – the backend is called and the suggested next action is shown.
 5. Use **Yes** / **No** for feedback (no backend call yet).
 
