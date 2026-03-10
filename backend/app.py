@@ -11,6 +11,9 @@ import os
 from datetime import datetime, timezone
 
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
@@ -73,7 +76,9 @@ def generate_action(goal: str, model: str, image_b64: str, mime_type: str) -> st
     data_url = f"data:{mime_type};base64,{image_b64}"
 
     if model == "glm-4.6v-flash":
-        api_key = "4cd014f0416446b993e475bef4622b1b.e8SuKjDQiPY4geFN"
+        api_key = os.environ.get("ZAI_API_KEY")
+        if not api_key:
+            return "[Error] Missing ZAI_API_KEY for glm-4.6v-flash. Set it in backend/.env"
         url = "https://api.z.ai/api/paas/v4/chat/completions/"
         messages = [
             {"role": "system", "content": system_prompt},
