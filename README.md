@@ -2,6 +2,10 @@
 
 A client-server system that recommends the next UI action from a phone screenshot and user goal, using vision language models (VLMs).
 
+<img width="531" height="419" alt="Screenshot 2026-11-02 at 17 57 36" src="https://github.com/user-attachments/assets/be470aed-087b-4fe6-b527-7bde1d0c5d84" />
+
+
+
 ## Submission Requirements:
 - CMPUT398_Project_Report.pdf: Project Report, uses Chicago Style for citation
 - run.sh: bash file to start backend and frontend
